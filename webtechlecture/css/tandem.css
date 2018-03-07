@@ -18,6 +18,8 @@ body{
 	cursor: pointer;
 }
 
-.button2{
-	background-color: #d8d6d7;
+.disabled{
+	opacity: 0.8;
+	cursor: not-allowed;
+	background-color: #4a4b4c;
 }
