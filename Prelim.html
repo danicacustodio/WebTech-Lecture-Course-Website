@@ -1,24 +1,400 @@
-<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Prelims</title>
+</head>
+<body>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Prelims</title>
-</head>
-<body>
+td, th {
+    border: no-border;
+    text-align: left;
+    padding: 8px;
+}
+</style>
 
+<h1>PRELIMS</h1><br/>
+<h2>HTTP Resources Addressing</h2>
+	<h4>are identified using URI(Uniform Resources Indetifiers).Unlike web data formats, where HTML is an important one, but not the only one, and web protocols, where HTTP has a similar status, there is only one Web naming/addressing technology
+URI:are short strings that identify resources in the web like documents, images, downloadable files, services, and other resources. They make resources available under a variety of naming schemes and access methods such as HTTP, FTP, and Internet mail addressable.</h4>
+<ul>
+	<li>scheme(http/https) - URI that is compliant to HTTP</li>
+	<li> authority - user information or authentication credentials </li>
+	<li> host - domain name (resolved to an IP address using DNS) of the server where the resource resides (or will be created) </li>
+			<dd> every domain name consists an IP address (like contacts in phone) </dd>
+		<dt> port number</dt>
+	<li> path to resource (resolved relative to the document root ont the server) </li>
+		<dd> may refer to a static or dynamic resource </dd>
+	<li> query - typically provided as key-value pairs with ampersand(&) separators between key/value pairs </li>
+		<dd> may be URL-encoded (% sign) </dd>
 
-<h1>PRELIMS</h1>
-<h3>Table of Contents</h3>
+<h2>HTTP Request</h2>
+	<h4>Whenever your web browser fetches a file  from a web server, it does so using HTTP. Your computer sends a request for some file, and the web server sends back a response.
+	That request which your computer sends to the web server contains all sorts of  interesting information. </h4>
 <dl>
-<dt>Introduction</dt>
-<dd>What is World Wide Web(www)?</dd>
-<dd>History</dd>
-<dt></dt>
-<dt></dt>
-<dt></dt>
+<dt> Request Method </dt>
+<dd> - to indicate the desired action to be performed for a given resource. </dd>
+
+	<dt> Request Target </dt><dd> - an inbound connection is obtained, the client sends an HTTP request message  with a request-target derived from the target URI. </dd>
+<ul>
+<li> origin-from </li>
+<dd> - a client must send only the absolute path and query components of the target URI as the request-target. </dd>
+
+<li> absolute-form </li>
+<dd>- a client MUST send the target URI in absolute-form as the request-target.</dd>
+
+<li> asterisk-form </li>
+<dd> - When a client wishes to request OPTIONS for the server as a whole, as opposed to a specific named resource of that server, the client must send only "*" as the request-target. </dd>
+</ul>
+</dl>
+
+	<li> Request Protocol Version </li>
 </ul>
 
+<h2> HTTP Request Line </h2>
+	<ul><li> Request Line (CRLF - terminated line consisting of 3 space separated values)</li>
+	</ul>
 
-</body>
-</html>
+<h2> HTTP Request Methods </h2>
+	<h3> Standard Methods </h3>
+<h5> - This allows user agents to represent other methods, such as POST, PUT and DELETE, in a special way, so that the user is made aware of the fact that a possibly unsafe action is being requested.</h5>
+<ul>
+<li>GET</li>
+<dd> simply fetch data </dd>
+<li>HEAD</li>
+<dd> same as GET method but retrieve only the METADATA (Header) </dd>
+<li>POST</li>
+<dd> Data will be re-submitted (the browser should alert the user that the data are about to be re-submitted) </dd>
+<dd> enclosed as a body </dd>
+<dd> safer than Get </dd>
+<li>PUT</li>
+<dd> creates/replace the state of the target resource </dd>
+<dd> Uploads a representation of the specified URI</dd>
+<li>DELETE</li>
+<dd> Deletes the specified resource </dd>
+<li>OPTIONS</li>
+<dd> the purpose is to let the user know what to do and what can only be done </dd>
+<dd> shows allowed HTTP request methods (Standard) </dd>
+<li>TRACE</li>
+<dd> repeats the request done </dd>
+<dd> used to invoke a remote, application-layer loop- back of the request message. </dd>
+<li>CONNECT</li>
+<dd> Converts the request connection to a transparent TCP/IP tunnel </dd>
+</ul>
+
+	<h3> Safe Methods </h3>
+<h4> methods that can be cached, prefetched without any repercussions to the resource. </h4>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+</ul>
+
+	<h3> Idempotent Methods </h3>
+<h4> the expectation is the same even if PUT and DELETE is used </h4>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>OPTIONS</li>
+</ul>
+
+	<H3> Cacheable Methods </H3>
+<h4> response isallowed to be stored for future use </h4>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+</ul>
+
+<h2> HTTP Response </h2>
+<h3> STATUS LINE </h3>
+<h4> Zero or more header indicating the end of the header fields. Optionally a message-body. </h4>
+<br/>
+<h2> STATUS CODE and REASON PHRASE </h2>
+<table>
+<tr>
+<th> INFORMATION(1xx) </th>
+</tr>
+<tr>
+<td>100</td>
+<td>Continue</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Processing</td>
+</tr>
+
+
+<tr>
+<th> SUCCESS(2xx) </th>
+</tr>
+<tr>
+<td>200</td>
+<td>Ok</td>
+</tr>
+<tr>/
+<td>201</td>
+<td>Created</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-Authorative Information</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+</tr>
+
+<tr>
+<th> REDIRECTION(3xx) </th>
+</tr>
+<tr>
+<td>300</td>
+<td>Multiple Choices</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Use Proxy</td>
+</tr>
+<tr>
+<td>306</td>
+<td>(unused)</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+</tr>
+<tr>
+<td>308</td>
+<td>Permanent Redirect</td>
+</tr>
+
+
+<tr>
+<th> CLIENT ERROR(4xx) </th>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+</tr>
+
+<tr>
+<td>402</td>
+<td>Payment Required</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+</tr>
+<tr>
+<td>406</td>
+<td> Not Acceptable</td>
+</tr>
+<tr>
+<td>407</td>
+<td> Proxy Authentication Required </td>
+</tr>
+<tr>
+<td>408</td>
+<td>Request Timeout</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Precondition Failed</td>
+</tr>
+<tr>
+<td>413</td>
+<td> Request Entity Too Large </td>
+</tr>
+<tr>
+<td>414</td>
+<td> Request-URI Too Long </td>
+</tr>
+<tr>
+<td>415</td>
+<td> Unsupported Media Type </td>
+</tr>
+<tr>
+<td>416</td>
+<td> Requested Range Not Satisfiable </td>
+</tr>
+<tr>
+<td>417</td>
+<td> Expectation Failed </td>
+</tr>
+<tr>
+<td>426</td>
+<td> Upgrade Required </td>
+</tr>
+<tr>
+<td>428</td>
+<td> Precondition Required </td>
+</tr>
+<tr>
+<td>429</td>
+<td> Too Many Requests </td>
+</tr>
+<tr>
+<td>431</td>
+<td> Request Header Fields Too Large </td>
+</tr>
+<tr>
+<td>451</td>
+<td> Unavailable For Legal Reasons </td>
+</tr>
+<tr>
+<th> SERVER ERROR(5xx) </th>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway / DNS Lookup Failed</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Timeout</td>
+</tr>
+<tr>
+<td>505</td>
+<td> HTTP Version Not Supported </td>
+</tr>
+<tr>
+<td>506</td>
+<td> Variant Also Negotiates </td>
+</tr>
+<tr>
+<td>507</td>
+<td> Insufficient Storage </td>
+</tr>
+<tr>
+<td>508</td>
+<td> Loop Detected (WebDAV) </td>
+</tr>
+<tr>
+<td>510</td>
+<td> Not Extended </td>
+</tr>
+<tr>
+<td>511</td>
+<td> Network Authentication Required </td>
+</tr>
+<tr>
+<td>598</td>
+<td> Network read timeout error </td>
+</tr>
+<tr>
+<td>599</td>
+<td> Network connect timeout error </td>
+</tr>
+</table>
+
+<h3> HTTP Status Codes </h3>
+<h4> The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request.</h4>
+<h5>1xx: Informational - Request received, continuing process
+
+<br/>2xx: Success - The action was successfully received, understood, and accepted
+
+<br/>3xx: Redirection - Further action must be taken in order to complete the request
+
+<br/>4xx: Client Error - The request contains bad syntax or cannot be fulfilled
+
+<br/>5xx: Server Error - The server failed to fulfill an apparently valid request </h4>
+
+<h3> HTTP Extensions </h3>
+<h4> The HTTP Extension Framework describes a generic extension mechanism for HTTP, which is designed to address the tension between private agreement and public specification and to accommodate extension of applications using HTTP clients, servers, and proxies.</h5>
+
+<h2> HTTP Protocol </h2>
+<h4> HTTP is based on a client-server architecture
+HTTP is a stateless communications protocol </h4>
+<ul>
+<li> servers don't keep information about client in between request </li>
+</ul>
+<h3> HTTP provides support for other functionalities such as: </h3>
+<ul>
+<li> cache control </li>
+<li> content media type (MIME) specification </li>
+<li> language and character set specification </li>
+<li> content/transfer codings </li>
+<li> content negotiation </li>
+<li> client-server protocol negotiations </li>
+<li> persistent connections - HTTP 2 - reuse of connection </li>
+<li> requests pipelining/multiplexing - Pipelining - multiple requests at a time </li>
+<li> authentication/authorization - HTTP accommodates the provision of authenticating requests </li>
+</ul>
+
+</body>
+</html>
