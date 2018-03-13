@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prelims</title>
+</head>
+<body>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: no-border;
+    text-align: left;
+    padding: 8px;
+}
+</style>
+<h1>PRELIMS</h1><br/>
+<dl>
+<dt><a href="#www">What is World Wide Web?</a></dt>
+<dd><a href="#history">History of World Wide Web</a></dd>
+<dt><a href="#http">What is HTTP?</a></dt>
+<dt><a href="#HTTPhistory">HTTP Versions</a></dt>
+<dt><a href="#hra">HTTP Resource Addressing</a></dt>
+<dt><a href="#hr">HTTP Request</a></dt>
+<dd><a href="#hrl">HTTP Request Line</a></dd>
+<dd><a href="#hrm">HTTP Request Methods</a></dd>
+<dt><a href="#httpr">HTTP Response</a></dt>
+<dd><a href="#sc">Status Codes</a></dd>
+<dd><a href="#scrp">Status Codes and Reason Phrase</a></dd>
+<dt><a href="#he">HTTP Extensions</a></dt>
+<dt><a href="#hp">HTTP Protocol</a></dt>
+</dl><br/>
+
+<h2>PRELIMS</h2><br/>
+<section id="www">
+<h2>What is World Wide Web(WWW)?</h2>
+<h4>The World Wide Web (www) is combination of all resources and users on the Internet that are using the Hypertext Transfer Protocol (HTTP).
+It is the universe of network accessible information, and embodiment of human knowledge.
+The Web, as it's commonly known, is often confused with the internet.
+Although the two are intricately connected, they are different things.
+The internet is, as its name implies, a network- a vast, global network that incorporates a multitude of lesser networks.
+As such, the internet consists of supporting infrastructure and other technologies.
+In contrast, the Web is a communications model that, through HTTP, enables the exchange of information over the internet.
+He is a British computer scientist, Born in London and his parents were computer scientists who worked on the earliest computers.
+He Graduated from Oxford University as an Software Engineer.</h4>
+</section>
+<section id="history">
+<h3>History of World Wide Web</h3>
+<h4>World Wide Web was ivented by Sir Tim-Berners Lee in 1989.
+In March 1989, Tim laid out his vision for what would become the web in a document called "Information Management"
+then He began work using a Next computer, one of Steve Jobs’ early products.
+
+By October of 1990, Tim had written the three fundamental technologies that remain foundation of today's web.
+	<ul>
+	<li>HTML(HyperText Markup Language)</li>
+	<dd>- The markup language for the web</dd>
+	<li>URI(Uniform Resource Identifier)</li>
+	<dd>- A kind of "address" that is unique and used to identify each resource on the web.</dd>
+	<dd>It is also commonly called a URL</dd>
+	<li>HTTP(Hypertxt Transfer Protocol)
+	<dd>- Allows for the retrieval of linked resources from across the web.</dd>
+	</ul>
+Tim also wrote the first web page editor/browser ("WorldWideWeb.app") and the first web server ("httpd").
+By the end of 1990, the first web page was served on the open internet,
+and in 1991, people outside of CERN were invited to join the new web community.
+As the web began to grow, Tim realised that its true potential would only be unleashed if anyone,
+anywhere could use it without paying a fee or having to as for permission.
+</h4>
+</section>
+<section id="http">
+<h3>What is HTTP(Hypertext Transfer Protocol)?</h3>
+<h4>Hypertext Transfer Protocol are set of rules for transferring files such as Images, Sound, Videos, Text, 
+and more multimedia Files on the World Wide Web.
+HTTP is an application that runs on top of the TCP/IP suite of protocols.
+Web Server Machine contains, in addition to the Web page files it can server, 
+an HTTP daemon a program that is design to wait for HTTP request to be handled when that arrive. 
+The  Web browser is a HTTP client, sending request to the server machine. 
+If the browser user enters the files requests by either opening a Web file or clicking a link, the browser builds 
+and HTTP request and send it to the IP Address indicated by the URL. 
+The HTTP daemon receives the request and sends back the requested file or files associated with the request.
+</h4>
+<section id="HTTPhistory">
+<h2>Versions of HTTP</h2>
+<h3>HTTP 1.0(RFC 1945) MAY 1996</h3>
+<h4>The Hypertext Transfer Protocol (HTTP) is an application-level
+   protocol with the lightness and speed necessary for distributed,
+   collaborative, hypermedia information systems. It is a generic,
+   stateless, object-oriented protocol which can be used for many tasks,
+   such as name servers and distributed object management systems,
+   through extension of its request methods (commands). A feature of
+   HTTP is the typing of data representation, allowing systems to be
+   built independently of the data being transferred.</h4>
+<h3>HTTP 1.1 (RFC 2616) June 1999</h3>
+<h4>The Hypertext Transfer Protocol is an application-level protocol for distributed, collaborative, hypermedia information systems. 
+It is a generic, stateless, protocol which can be used for many tasks beyond its use for hypertext, such as name servers 
+and distributed object management systems, through extension of its request methods, error codes and headers. 
+A feature of HTTP is the typing and negotiation of data representation, allowing systems 
+to be built independently of the data being transferred.</h4>
+<h3>HTTP 2.0 (RFC 7540) May 2015</h3>
+<h4>ol, referred to as HTTP
+   version 2.  HTTP/2 enables a more efficient use of network
+   resources and a reduced perception of latency by introducing header
+   field compression and allowing multiple concurrent exchanges on the
+   same connection.  It also introduces unsolicited push of
+   representations from servers to clients.
+   This specification is an alternative to, but does not obsolete, the
+   HTTP/1.1 message syntax.  HTTP's existing semantics remain unchanged.</h4>
+</section>
+<section id="hra">
+<h2>HTTP Resources Addressing</h2>
+	<h4>are identified using URI(Uniform Resources Indetifiers).
+	Unlike web data formats, where HTML is an important one, but not the only one, and web protocols,
+	where HTTP has a similar status, there is only one Web naming/addressing technology
+URI:are short strings that identify resources in the web like documents, images, downloadable files, services, and other resources.
+They make resources available under a variety of naming schemes and access methods such as HTTP, FTP, and Internet mail addressable.</h4>
+<ul>
+	<li>scheme(http/https) - URI that is compliant to HTTP</li>
+	<li> authority - user information or authentication credentials </li>
+	<li> host - domain name (resolved to an IP address using DNS) of the server where the resource resides (or will be created) </li>
+			<dd> every domain name consists an IP address (like contacts in phone) </dd>
+		<dt> port number</dt>
+	<li> path to resource (resolved relative to the document root ont the server) </li>
+		<dd> may refer to a static or dynamic resource </dd>
+	<li> query - typically provided as key-value pairs with ampersand(&) separators between key/value pairs </li>
+		<dd> may be URL-encoded (% sign) </dd>
+</section>
+<section id="hr">
+<h2>HTTP Request</h2>
+	<h4>Whenever your web browser fetches a file  from a web server, it does so using HTTP.
+	Your computer sends a request for some file, and the web server sends back a response.
+	That request which your computer sends to the web server contains all sorts of  interesting information. </h4>
+<dl>
+<dt> Request Method </dt>
+<dd> - to indicate the desired action to be performed for a given resource. </dd>
+
+	<dt> Request Target </dt><dd> - an inbound connection is obtained, the client sends an HTTP request message  with a request-target derived from the target URI. </dd>
+<ul>
+<li> origin-from </li>
+<dd> - a client must send only the absolute path and query components of the target URI as the request-target. </dd>
+
+<li> absolute-form </li>
+<dd>- a client MUST send the target URI in absolute-form as the request-target.</dd>
+
+<li> asterisk-form </li>
+<dd> - When a client wishes to request OPTIONS for the server as a whole, as opposed to a specific named resource of that server, the client must send only "*" as the request-target. </dd>
+</ul>
+</dl>
+
+	<li> Request Protocol Version </li>
+</ul>
+</section>
+<section id="hrl">
+<h2> HTTP Request Line </h2>
+	<ul><li> Request Line (CRLF - terminated line consisting of 3 space separated values)</li>
+	</ul>
+</section>
+<section id="hrm">
+<h2> HTTP Request Methods </h2>
+	<h3> Standard Methods </h3>
+<h5> - This allows user agents to represent other methods, such as POST, PUT and DELETE, in a special way, so that the user is made aware of the fact that a possibly unsafe action is being requested.</h5>
+<ul>
+<li>GET</li>
+<dd> simply fetch data </dd>
+<li>HEAD</li>
+<dd> same as GET method but retrieve only the METADATA (Header) </dd>
+<li>POST</li>
+<dd> Data will be re-submitted (the browser should alert the user that the data are about to be re-submitted) </dd>
+<dd> enclosed as a body </dd>
+<dd> safer than Get </dd>
+<li>PUT</li>
+<dd> creates/replace the state of the target resource </dd>
+<dd> Uploads a representation of the specified URI</dd>
+<li>DELETE</li>
+<dd> Deletes the specified resource </dd>
+<li>OPTIONS</li>
+<dd> the purpose is to let the user know what to do and what can only be done </dd>
+<dd> shows allowed HTTP request methods (Standard) </dd>
+<li>TRACE</li>
+<dd> repeats the request done </dd>
+<dd> used to invoke a remote, application-layer loop- back of the request message. </dd>
+<li>CONNECT</li>
+<dd> Converts the request connection to a transparent TCP/IP tunnel </dd>
+</ul>
+
+	<h3> Safe Methods </h3>
+<h4> methods that can be cached, prefetched without any repercussions to the resource. </h4>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+</ul>
+
+	<h3> Idempotent Methods </h3>
+<h4> the expectation is the same even if PUT and DELETE is used </h4>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>OPTIONS</li>
+</ul>
+
+	<H3> Cacheable Methods </H3>
+<h4> response isallowed to be stored for future use </h4>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+</ul>
+</section>
+<section id="httpr">
+<h2> HTTP Response </h2>
+<section id="sc">
+<h3> HTTP Status Codes </h3>
+<h4> The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request.</h4>
+<h4>1xx: Informational - Request received, continuing process
+
+<br/>2xx: Success - The action was successfully received, understood, and accepted
+
+<br/>3xx: Redirection - Further action must be taken in order to complete the request
+
+<br/>4xx: Client Error - The request contains bad syntax or cannot be fulfilled
+
+<br/>5xx: Server Error - The server failed to fulfill an apparently valid request </h4>
+</section>
+<h3> STATUS LINE </h3>
+<h4> Zero or more header indicating the end of the header fields. Optionally a message-body. </h4>
+<br/>
+<section id="scrp">
+<h2> STATUS CODE and REASON PHRASE </h2>
+<table>
+<tr>
+<th> INFORMATION(1xx) </th>
+</tr>
+<tr>
+<td>100</td>
+<td>Continue</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Processing</td>
+</tr>
+
+
+<tr>
+<th> SUCCESS(2xx) </th>
+</tr>
+<tr>
+<td>200</td>
+<td>Ok</td>
+</tr>
+<tr>/
+<td>201</td>
+<td>Created</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-Authorative Information</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+</tr>
+
+<tr>
+<th> REDIRECTION(3xx) </th>
+</tr>
+<tr>
+<td>300</td>
+<td>Multiple Choices</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Use Proxy</td>
+</tr>
+<tr>
+<td>306</td>
+<td>(unused)</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+</tr>
+<tr>
+<td>308</td>
+<td>Permanent Redirect</td>
+</tr>
+
+
+<tr>
+<th> CLIENT ERROR(4xx) </th>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+</tr>
+
+<tr>
+<td>402</td>
+<td>Payment Required</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+</tr>
+<tr>
+<td>406</td>
+<td> Not Acceptable</td>
+</tr>
+<tr>
+<td>407</td>
+<td> Proxy Authentication Required </td>
+</tr>
+<tr>
+<td>408</td>
+<td>Request Timeout</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Precondition Failed</td>
+</tr>
+<tr>
+<td>413</td>
+<td> Request Entity Too Large </td>
+</tr>
+<tr>
+<td>414</td>
+<td> Request-URI Too Long </td>
+</tr>
+<tr>
+<td>415</td>
+<td> Unsupported Media Type </td>
+</tr>
+<tr>
+<td>416</td>
+<td> Requested Range Not Satisfiable </td>
+</tr>
+<tr>
+<td>417</td>
+<td> Expectation Failed </td>
+</tr>
+<tr>
+<td>426</td>
+<td> Upgrade Required </td>
+</tr>
+<tr>
+<td>428</td>
+<td> Precondition Required </td>
+</tr>
+<tr>
+<td>429</td>
+<td> Too Many Requests </td>
+</tr>
+<tr>
+<td>431</td>
+<td> Request Header Fields Too Large </td>
+</tr>
+<tr>
+<td>451</td>
+<td> Unavailable For Legal Reasons </td>
+</tr>
+<tr>
+<th> SERVER ERROR(5xx) </th>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway / DNS Lookup Failed</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Timeout</td>
+</tr>
+<tr>
+<td>505</td>
+<td> HTTP Version Not Supported </td>
+</tr>
+<tr>
+<td>506</td>
+<td> Variant Also Negotiates </td>
+</tr>
+<tr>
+<td>507</td>
+<td> Insufficient Storage </td>
+</tr>
+<tr>
+<td>508</td>
+<td> Loop Detected (WebDAV) </td>
+</tr>
+<tr>
+<td>510</td>
+<td> Not Extended </td>
+</tr>
+<tr>
+<td>511</td>
+<td> Network Authentication Required </td>
+</tr>
+<tr>
+<td>598</td>
+<td> Network read timeout error </td>
+</tr>
+<tr>
+<td>599</td>
+<td> Network connect timeout error </td>
+</tr>
+</table>
+</section>
+</section>
+<section id="he">
+<h3> HTTP Extensions </h3>
+<h4> The HTTP Extension Framework describes a generic extension mechanism for HTTP, which is designed to address the tension between private agreement and public specification and to accommodate extension of applications using HTTP clients, servers, and proxies.</h5>
+</section>
+<section id="hp">
+<h2> HTTP Protocol </h2>
+<h4> HTTP is based on a client-server architecture
+HTTP is a stateless communications protocol </h4>
+<ul>
+<li> servers don't keep information about client in between request </li>
+</ul>
+<h3> HTTP provides support for other functionalities such as: </h3>
+<ul>
+<li> cache control </li>
+<li> content media type (MIME) specification </li>
+<li> language and character set specification </li>
+<li> content/transfer codings </li>
+<li> content negotiation </li>
+<li> client-server protocol negotiations </li>
+<li> persistent connections - HTTP 2 - reuse of connection </li>
+<li> requests pipelining/multiplexing - Pipelining - multiple requests at a time </li>
+<li> authentication/authorization - HTTP accommodates the provision of authenticating requests </li>
+</ul>
+</section>
+</body>
+</html
