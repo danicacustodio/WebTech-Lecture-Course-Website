@@ -1,0 +1,60 @@
+Cascading Style Sheets (CSS)
+	CSS is a mechanism that is used by developers to specify the presentation of structurally marked up documents such as HTML, SVG, MathML, etc. Everything visual about a website from the layout, formatting, fonts, colors andd etc is done using CSS.
+THE CSS SAGA
+	CSS was originally developed by Hakun Wium Lie and Bert Bos and is developed and maintained by the World Wide Web Consortium.
+  Versions:
+   ⦁	CSS 1 -  was developed by Hakun Wium Lie and Bert Bos. This version has capabilities that support Font properties, Color, Text Attributes, Alignment, Unique identification and generic classification of attributes, etc. 
+   ⦁	CSS 2 - was developed by W3C. It includes capabilities like:  Positioning of elements (absolute, relative,fixed), z-index, new font properties (shadow,etc),bidirectional text and the concept of media types.
+   ⦁	CSS 2.1- The version is a revision that fixes errors in CSS 2 and removed poorly supported features.
+   ⦁	CSS 3  - is a modularized approach to CSS development. The version is divided into several modules, where each module adds new capabilities and extends the features. (css3-background, css3-box, css3-mediaqueries, css3-selectors, etc) 
+
+HTML Style Sheets
+	Author Style Sheets are styles specified by the developer of the website. These style sheets can be included in the html document or linked externally.
+	           External Style Sheets -  The CSS rules are defined in a separate file with the     extension .css and is included in HTML files using the <link> tag.  The <link> tag can occur either in the head or body element.
+                    <!DOCTYPE html>
+	                  <html>	
+		                    <head>
+  			                    <title>Web Tech</title>
+   			                    <link rel="stylesheet" type="text/css" href="css/style.css">
+	                      </head>
+		                    <body>
+			                        <h1>Web Systems and Technologies</h1> 
+	 		                        <p>External Style Sheets</p>
+		                    </body>
+	                  </html>
+                    
+             Embedded Style Sheets  - The CSS rules are defined in the header section of the HTML document. Embedded styles will override the rules defined in an external style sheet. The rules are defined using the <style> tag. 
+                    
+                  <!DOCTYPE html>
+	                <html>	
+		                <head>
+  			               <title>Web Tech</title>
+                       <style type = "text/css"> 
+                           h1{ 
+                              font-size:20px; 
+                           } 
+                           p{ 
+                               color:blue; 
+                           } 
+                       </style> 
+	                 </head>
+		                <body>
+			                <h1>Web Systems and Technologies</h1> 
+		                	<p>Embedded Style Sheets</p>
+		                </body>
+	              </html>
+                         
+            Inline Style Sheet - The CSS rules are defined directly to an HTML element. This has the highest priority among the three, which means, it can override the rules defined in the external and the internal style sheets. The rules are added using the style attribute of the element.
+
+                    <!DOCTYPE html>
+	                  <html>	
+		                <head>
+  			               <title>Web Tech</title>
+                    </head>
+		                <body>
+		                       <h1 style = "font-size:20px;" >Web Systems and Technologies</h1> 
+		                       <p style = "color:blue;" >Inline sStyle Sheets</p>
+		                </body>
+	                  </html>
+
+
