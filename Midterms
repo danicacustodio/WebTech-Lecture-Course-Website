@@ -56,5 +56,11 @@ HTML Style Sheets
 		                       <p style = "color:blue;" >Inline sStyle Sheets</p>
 		                </body>
 	                  </html>
+	
+	
+	User Style Sheets are styles defined by the end-user to override the styles defined by the author or developer of the site.
+	User-Agent Style Sheets are the default styles provided by the browser to render HTML in a sensible manner when there is no ther style sheets provided.
+			The user-agent style sheet has the lowest priority and can be overridden by the user or the author.
+			
 
 
