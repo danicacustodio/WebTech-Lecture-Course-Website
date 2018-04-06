@@ -4,39 +4,34 @@
     <title>Prelims</title>
 </head>
 <body>
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
-    border: no-border;
-    text-align: left;
-    padding: 8px;
-}
-</style>
-<h1>PRELIMS</h1><br/>
-<dl>
-<dt><a href="#www">What is World Wide Web?</a></dt>
-<dd><a href="#history">History of World Wide Web</a></dd>
-<dt><a href="#http">What is HTTP?</a></dt>
-<dt><a href="#HTTPhistory">HTTP Versions</a></dt>
-<dt><a href="#hra">HTTP Resource Addressing</a></dt>
-<dt><a href="#hr">HTTP Request</a></dt>
-<dd><a href="#hrl">HTTP Request Line</a></dd>
-<dd><a href="#hrm">HTTP Request Methods</a></dd>
-<dt><a href="#httpr">HTTP Response</a></dt>
-<dd><a href="#sc">Status Codes</a></dd>
-<dd><a href="#scrp">Status Codes and Reason Phrase</a></dd>
-<dt><a href="#he">HTTP Extensions</a></dt>
-<dt><a href="#hp">HTTP Protocol</a></dt>
-</dl><br/>
-
-<h2>PRELIMS</h2><br/>
-<section id="www">
+<link href="prelim.css" type="text/css" rel="stylesheet">
+<br/>
+<div class="header">
+<h1>TANDEM</h1>
+</div>
+<div class="row">
+  <div class="column left">
+    <h2>PRELIMS</h2>
+		<dl>
+		<dt><a href="#www">What is World Wide Web?</a></dt>
+		<dd><a href="#history">History of World Wide Web</a></dd>
+		<dt><a href="#http">What is HTTP?</a></dt>
+		<dt><a href="#HTTPhistory">HTTP Versions</a></dt>
+		<dt><a href="#hra">HTTP Resource Addressing</a></dt>
+		<dt><a href="#hr">HTTP Request</a></dt>
+		<dd><a href="#hrl">HTTP Request Line</a></dd>
+		<dd><a href="#hrm">HTTP Request Methods</a></dd>
+		<dt><a href="#httpr">HTTP Response</a></dt>
+		<dd><a href="#sc">Status Codes</a></dd>
+		<dd><a href="#scrp">Status Codes and Reason Phrase</a></dd>
+		<dt><a href="#he">HTTP Extensions</a></dt>
+		<dt><a href="#hp">HTTP Protocol</a></dt>
+</dl>
+  </div>
+  <div class="column right">
+    <section id="www">
 <h2>What is World Wide Web(WWW)?</h2>
-<h4>The World Wide Web (www) is combination of all resources and users on the Internet that are using the Hypertext Transfer Protocol (HTTP).
+<p>The World Wide Web (www) is combination of all resources and users on the Internet that are using the Hypertext Transfer Protocol (HTTP).
 It is the universe of network accessible information, and embodiment of human knowledge.
 The Web, as it's commonly known, is often confused with the internet.
 Although the two are intricately connected, they are different things.
@@ -44,11 +39,11 @@ The internet is, as its name implies, a network- a vast, global network that inc
 As such, the internet consists of supporting infrastructure and other technologies.
 In contrast, the Web is a communications model that, through HTTP, enables the exchange of information over the internet.
 He is a British computer scientist, Born in London and his parents were computer scientists who worked on the earliest computers.
-He Graduated from Oxford University as an Software Engineer.</h4>
+He Graduated from Oxford University as an Software Engineer.</p>
 </section>
 <section id="history">
 <h3>History of World Wide Web</h3>
-<h4>World Wide Web was ivented by Sir Tim-Berners Lee in 1989.
+<p>World Wide Web was ivented by Sir Tim-Berners Lee in 1989.
 In March 1989, Tim laid out his vision for what would become the web in a document called "Information Management"
 then He began work using a Next computer, one of Steve Jobs’ early products.
 
@@ -67,11 +62,11 @@ By the end of 1990, the first web page was served on the open internet,
 and in 1991, people outside of CERN were invited to join the new web community.
 As the web began to grow, Tim realised that its true potential would only be unleashed if anyone,
 anywhere could use it without paying a fee or having to as for permission.
-</h4>
+</p>
 </section>
 <section id="http">
 <h3>What is HTTP(Hypertext Transfer Protocol)?</h3>
-<h4>Hypertext Transfer Protocol are set of rules for transferring files such as Images, Sound, Videos, Text, 
+<p>Hypertext Transfer Protocol are set of rules for transferring files such as Images, Sound, Videos, Text, 
 and more multimedia Files on the World Wide Web.
 HTTP is an application that runs on top of the TCP/IP suite of protocols.
 Web Server Machine contains, in addition to the Web page files it can server, 
@@ -80,41 +75,41 @@ The  Web browser is a HTTP client, sending request to the server machine.
 If the browser user enters the files requests by either opening a Web file or clicking a link, the browser builds 
 and HTTP request and send it to the IP Address indicated by the URL. 
 The HTTP daemon receives the request and sends back the requested file or files associated with the request.
-</h4>
+</p>
 <section id="HTTPhistory">
 <h2>Versions of HTTP</h2>
 <h3>HTTP 1.0(RFC 1945) MAY 1996</h3>
-<h4>The Hypertext Transfer Protocol (HTTP) is an application-level
+<p>The Hypertext Transfer Protocol (HTTP) is an application-level
    protocol with the lightness and speed necessary for distributed,
    collaborative, hypermedia information systems. It is a generic,
    stateless, object-oriented protocol which can be used for many tasks,
    such as name servers and distributed object management systems,
    through extension of its request methods (commands). A feature of
    HTTP is the typing of data representation, allowing systems to be
-   built independently of the data being transferred.</h4>
+   built independently of the data being transferred.</p>
 <h3>HTTP 1.1 (RFC 2616) June 1999</h3>
-<h4>The Hypertext Transfer Protocol is an application-level protocol for distributed, collaborative, hypermedia information systems. 
+<p>The Hypertext Transfer Protocol is an application-level protocol for distributed, collaborative, hypermedia information systems. 
 It is a generic, stateless, protocol which can be used for many tasks beyond its use for hypertext, such as name servers 
 and distributed object management systems, through extension of its request methods, error codes and headers. 
 A feature of HTTP is the typing and negotiation of data representation, allowing systems 
-to be built independently of the data being transferred.</h4>
+to be built independently of the data being transferred.</p>
 <h3>HTTP 2.0 (RFC 7540) May 2015</h3>
-<h4>ol, referred to as HTTP
+<p>ol, referred to as HTTP
    version 2.  HTTP/2 enables a more efficient use of network
    resources and a reduced perception of latency by introducing header
    field compression and allowing multiple concurrent exchanges on the
    same connection.  It also introduces unsolicited push of
    representations from servers to clients.
    This specification is an alternative to, but does not obsolete, the
-   HTTP/1.1 message syntax.  HTTP's existing semantics remain unchanged.</h4>
+   HTTP/1.1 message syntax.  HTTP's existing semantics remain unchanged.</p>
 </section>
 <section id="hra">
 <h2>HTTP Resources Addressing</h2>
-	<h4>are identified using URI(Uniform Resources Indetifiers).
+	<p>are identified using URI(Uniform Resources Indetifiers).
 	Unlike web data formats, where HTML is an important one, but not the only one, and web protocols,
 	where HTTP has a similar status, there is only one Web naming/addressing technology
 URI:are short strings that identify resources in the web like documents, images, downloadable files, services, and other resources.
-They make resources available under a variety of naming schemes and access methods such as HTTP, FTP, and Internet mail addressable.</h4>
+They make resources available under a variety of naming schemes and access methods such as HTTP, FTP, and Internet mail addressable.</p>
 <ul>
 	<li>scheme(http/https) - URI that is compliant to HTTP</li>
 	<li> authority - user information or authentication credentials </li>
@@ -128,9 +123,9 @@ They make resources available under a variety of naming schemes and access metho
 </section>
 <section id="hr">
 <h2>HTTP Request</h2>
-	<h4>Whenever your web browser fetches a file  from a web server, it does so using HTTP.
+	<p>Whenever your web browser fetches a file  from a web server, it does so using HTTP.
 	Your computer sends a request for some file, and the web server sends back a response.
-	That request which your computer sends to the web server contains all sorts of  interesting information. </h4>
+	That request which your computer sends to the web server contains all sorts of  interesting information. </p>
 <dl>
 <dt> Request Method </dt>
 <dd> - to indicate the desired action to be performed for a given resource. </dd>
@@ -159,7 +154,7 @@ They make resources available under a variety of naming schemes and access metho
 <section id="hrm">
 <h2> HTTP Request Methods </h2>
 	<h3> Standard Methods </h3>
-<h5> - This allows user agents to represent other methods, such as POST, PUT and DELETE, in a special way, so that the user is made aware of the fact that a possibly unsafe action is being requested.</h5>
+<p> - This allows user agents to represent other methods, such as POST, PUT and DELETE, in a special way, so that the user is made aware of the fact that a possibly unsafe action is being requested.</p>
 <ul>
 <li>GET</li>
 <dd> simply fetch data </dd>
@@ -185,7 +180,7 @@ They make resources available under a variety of naming schemes and access metho
 </ul>
 
 	<h3> Safe Methods </h3>
-<h4> methods that can be cached, prefetched without any repercussions to the resource. </h4>
+<p> methods that can be cached, prefetched without any repercussions to the resource. </p>
 <ul>
 <li>GET</li>
 <li>HEAD</li>
@@ -193,7 +188,7 @@ They make resources available under a variety of naming schemes and access metho
 </ul>
 
 	<h3> Idempotent Methods </h3>
-<h4> the expectation is the same even if PUT and DELETE is used </h4>
+<p> the expectation is the same even if PUT and DELETE is used </p>
 <ul>
 <li>GET</li>
 <li>HEAD</li>
@@ -203,7 +198,7 @@ They make resources available under a variety of naming schemes and access metho
 </ul>
 
 	<H3> Cacheable Methods </H3>
-<h4> response isallowed to be stored for future use </h4>
+<p> response isallowed to be stored for future use </p>
 <ul>
 <li>GET</li>
 <li>HEAD</li>
@@ -213,8 +208,8 @@ They make resources available under a variety of naming schemes and access metho
 <h2> HTTP Response </h2>
 <section id="sc">
 <h3> HTTP Status Codes </h3>
-<h4> The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request.</h4>
-<h4>1xx: Informational - Request received, continuing process
+<p> The Status-Code element is a 3-digit integer result code of the attempt to understand and satisfy the request.</p>
+<p>1xx: Informational - Request received, continuing process
 
 <br/>2xx: Success - The action was successfully received, understood, and accepted
 
@@ -222,10 +217,10 @@ They make resources available under a variety of naming schemes and access metho
 
 <br/>4xx: Client Error - The request contains bad syntax or cannot be fulfilled
 
-<br/>5xx: Server Error - The server failed to fulfill an apparently valid request </h4>
+<br/>5xx: Server Error - The server failed to fulfill an apparently valid request </p>
 </section>
 <h3> STATUS LINE </h3>
-<h4> Zero or more header indicating the end of the header fields. Optionally a message-body. </h4>
+<p> Zero or more header indicating the end of the header fields. Optionally a message-body. </p>
 <br/>
 <section id="scrp">
 <h2> STATUS CODE and REASON PHRASE </h2>
@@ -254,7 +249,7 @@ They make resources available under a variety of naming schemes and access metho
 <td>200</td>
 <td>Ok</td>
 </tr>
-<tr>/
+<tr>
 <td>201</td>
 <td>Created</td>
 </tr>
@@ -476,12 +471,12 @@ They make resources available under a variety of naming schemes and access metho
 </section>
 <section id="he">
 <h3> HTTP Extensions </h3>
-<h4> The HTTP Extension Framework describes a generic extension mechanism for HTTP, which is designed to address the tension between private agreement and public specification and to accommodate extension of applications using HTTP clients, servers, and proxies.</h5>
+<p> The HTTP Extension Framework describes a generic extension mechanism for HTTP, which is designed to address the tension between private agreement and public specification and to accommodate extension of applications using HTTP clients, servers, and proxies.</p>
 </section>
 <section id="hp">
 <h2> HTTP Protocol </h2>
-<h4> HTTP is based on a client-server architecture
-HTTP is a stateless communications protocol </h4>
+<p> HTTP is based on a client-server architecture
+HTTP is a stateless communications protocol </p>
 <ul>
 <li> servers don't keep information about client in between request </li>
 </ul>
@@ -498,5 +493,17 @@ HTTP is a stateless communications protocol </h4>
 <li> authentication/authorization - HTTP accommodates the provision of authenticating requests </li>
 </ul>
 </section>
+	<div class="column left1">
+		<a href="#" class="previous round">&laquo;</a>
+	</div>
+	<div class="column right1">
+		<a href="#" class="next round">&raquo;</a>
+	</div>
+  </div>
+</div>
+<div class="footer">
+  <h3>Copyright 2018</h3>
+</div>
+
 </body>
-</html
+</html>
