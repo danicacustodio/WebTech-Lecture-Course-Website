@@ -1,0 +1,156 @@
+JAVA SCRIPT
+
+JavaScript is a scripting or programming language that allows you to implement complex things on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.
+
+JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.
+
+JAVASCRIPT API's
+
+	Browser APIs are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things.
+
+		-DOM (Document Object Model) API allows you to manipulate HTML and CSS, creating, removing and changing HTML, dynamically applying new styles to your page, etc. 
+
+		-The Geolocation API retrieves geographical information. This is how Google Maps is able to find your location, and plot it on a map.
+
+		-The Canvas and WebGL APIs allow you to create animated 2D and 3D graphics. People are doing some amazing things using these web technologies.
+
+		-Audio and Video APIs like HTMLMediaElement and WebRTC allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer.
+
+	Third party APIs are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web.
+
+		-The Twitter API allows you to do things like displaying your latest tweets on your website.
+
+		-The Google Maps API allows you to embed custom maps into your website, and other such functionality.
+
+JAVASCRIPT FUNDAMENTALS
+	
+	VARIABLES
+		-You use variables to store, retrieve, and manipulate values that appear in your code. Try to give your variables meaningful names to make it easy for other people to understand what your code does.
+
+		Declaring Variables
+			-The first time a variable appears in your script is its declaration. The first mention of the variable sets it up in memory, so you can refer to it later on in your script. You should declare variables before using them. You do this using the var keyword.
+
+		Naming Variables
+			-JavaScript is a case-sensitive language. This means that a variable name such as myCounter is different from the variable name MYCounter. Variable names can be of any length.
+
+	DATA TYPES
+		Primary Data Types
+		-String
+		-Number
+		-Boolean
+
+		Composite Data Types
+		-Object
+		-Array
+
+		Special Data Types
+		-Null
+		-Undefined
+
+		String Data Type
+			-A string value is a chain of zero or more Unicode characters (letters, digits, and punctuation marks). You use the string data type to represent text in JavaScript. You include string literals in your scripts by enclosing them in single or double quotation marks. Double quotation marks can be contained in strings surrounded by single quotation marks, and single quotation marks can be contained in strings surrounded by double quotation marks. 
+
+		Number Data Type
+			Integer Values
+				-Integer values can be positive whole numbers, negative whole numbers, and 0. They can be represented in base 10 (decimal), base 16 (hexadecimal), and base 8 (octal). 
+
+			Floating-point Values
+				-Floating-point values can be whole numbers with a decimal portion. Additionally, they can be expressed in scientific notation. That is, an uppercase or lowercase "e" is used to represent "ten to the power of". JavaScript represents numbers using the eight byte IEEE 754 floating-point standard for numerical representation.
+
+			Boolean Data Type
+				-Whereas the string and number data types can have a virtually unlimited number of different values, the Boolean data type can only have two. They are the literals true and false. A Boolean value is a truth-value: it specifies whether the condition is true or not.
+
+			Null Data Type
+				-The null data type has only one value in JavaScript: null. The null keyword cannot be used as the name of a function or variable.
+
+				-A variable that contains null contains no valid Number, String, Boolean, Array, or Object. You can erase the contents of a variable by assigning it the null value.
+
+			Undefined Data Type
+				-The undefined value is returned when you use an object property that does not exist, or a variable that has been declared, but has never had a value assigned to it.
+
+
+	OPERATORS
+		Computational Operators
+			Description						Symbol
+			Unary negation					-
+			Increment						++
+			Decrement						--
+			Multiplications					*
+			Division						/
+			Remainder arithmentic			%
+			Addition 						+
+			Suibtraction					-
+
+		Logical Operators
+			Description						Symbol
+			Logical NOT 					!
+			Less Than 						<
+			Greater Than 					>
+			Less than or Equal to 			<=
+			Greater than or Equal to 		>=
+			Equality 						==
+			Inequality 						!=
+			Logical AND 					&&
+			Logical OR 						||
+			Conditional(ternary)			?:
+			Comma 							,
+			Strict Equality 				===
+			Strict Inequality 				!==
+
+		Bitwise Operators
+			Description						Symbol
+			Bitwise NOT 					~
+			Bitwise Left Shift				<<
+			Bitwise Right Shift 			>>
+			Unsigned Right Shift 			>>>
+			Bitwise AND 					&
+			Bitwise XOR 					^
+			Bitwise OR 						|
+
+			Assignment Operators
+			Description						Symbol
+			Assignment 						=
+			Compound Assignment 			OP=(such as += and &=)
+
+		Miscellaneouse Operators
+			Description						Symbol
+			delete 							delete
+			typeof 							typeof
+			void 							void
+			instanceof 						instanceof
+			new								new
+			in 								in
+
+		Equality and Strict Equality
+			-The difference between == (equality) and === (strict equality) is that the equality operator will coerce values of different types before checking for equality. For example, comparing the string "1" with the number 1 will compare as true. The strict equality operator, on the other hand, will not coerce values to different types, and so the string "1" will not compare as equal to the number 1.
+
+
+	JAVASCRIPT FUNCTIONS
+		-JavaScript functions perform actions; they can also return values. Sometimes these are the results of calculations or comparisons. Functions are also called "global methods".
+
+		Functions combine several operations under one name. This lets you streamline your code. You can write out a set of statements, name it, and then execute the entire set by calling it and passing to it any information it needs.
+
+		You pass information to a function by enclosing the information in parentheses after the name of the function. Pieces of information that are passed to a function are called arguments or parameters. Some functions do not take any arguments at all while others take one or more arguments. In some functions, the number of arguments depends on how you are using the function.
+
+		Built-in Functions
+			-The JavaScript language includes several built-in functions. Some let you handle expressions and special characters, while others convert strings to numeric values.
+
+			The checkTriplet function in the following example takes the lengths of the sides of a triangle as its arguments. It calculates from them whether the triangle is a right triangle by checking whether the three numbers constitute a Pythagorean triplet. The checkTriplet function calls one of two other functions to make the actual test.
+
+		Arrow Functions
+			-Arrow function syntax, =>, provides a shorthand method of specifying an anonymous function. Here is the arrow function syntax.
+
+			Values to the left of the arrow, which may be enclosed by parentheses, specify the arguments passed to the function. A single argument to the function does not require parentheses. Parentheses are required if no arguments are passed in. The function definition to the right of the arrow can be either an expression, such as v + 1, or a block of statements enclosed by braces ({}).
+
+		Default Parameters
+			-You can specify a default value for a parameter in a function by assigning it an initial value. The default value may be a constant value or an expression.
+
+		Rest Parameters
+			-Rest parameters, specified by the spread operator ..., allow you to turn consecutive arguments in a function call to an array.
+
+			Rest parameters eliminate the need for the arguments object. Rest parameters differ from the arguments object in several ways, such as:
+
+			A rest parameter is an actual array instance and therefore supports operations that can be performed on an array.
+
+			A rest parameter includes only the consecutive arguments that are not passed in as separate (named) arguments (conversely, the arguments object contains all arguments passed into the function).
+
