@@ -62,5 +62,100 @@ HTML Style Sheets
 	User-Agent Style Sheets are the default styles provided by the browser to render HTML in a sensible manner when there is no ther style sheets provided.
 			The user-agent style sheet has the lowest priority and can be overridden by the user or the author.
 			
+			
+
+CSS STATEMENTS
+ @RULES
+	An @Rule is a css statement begginning with the @ sign followed by an identifier up to the semi -colon. 
+@charset The @rule that defines the character set used.
+	<style type="text/css">
+  	 <!--
+   	@charset "utf-8"
+	   .......other CSS rules .....
+ 	  -->
+	</style>
+@import - This @ rule  allows to import or include rules of another style sheet.
+	<style type="text/css">
+  	 <!--
+  		 @import "style1.css";
+		   or
+  		 @import url("style1.css");
+  		 .......other CSS rules .....
+ 	  -->
+	</style>
+@font-face is an @ rule that describe the aspect of an external font to be downloaded
+	<style tyle="text/css">
+ 	  <!--
+  		 @font-face { font-family: "Scarborough Light";
+   			        src: url("http://www.font.site/s/scarbo-lt"); }   
+  	 -->
+	</style>
+Other @rules ( @media , @supports, @keyframes ....)
+!important Rule  CSS are applied in the same order as they are defined but Any rule having !important will always be applied no matter where the rule is defined in the css document
+	<style type="text/css">
+        		 p { color: black !important; }
+         		p { color: blue; }
+                 </style>
+
+CSS RULE SETS
+A CSS is composed of style rules that can be interpreted by a user agent and apply the rules to the corresponding element in the html document. The style rule has three parts; the Selector, Property; and the value.
+Selector is an HTML tag at which the rule will be applied on. Property is an attribute of an HTML tag that is converted into CSS property. Values are assigned to the property.
+Syntax : (Selector) {(Property) : (Value);}
+	table { border : 1px solid #F1F1F1;
+	            border-collapse: collapse;}
+
+CSS SELECTORS
+ 	CSS selectors are patterns used to select the HTML element a style is applied on using the element's name, id, class, attribute and so on.
+ID Selectors- uses the id attribute of an HTML element to select the specific element. 
+#myfirstparagraph {color: red;}
+CLASS Selector- selects the element with a specific class attribute
+	.firstparagraph{color:red;}
+TYPE Selector- selects all element of the given type within the document
+	p{color:red;}
+ATTRIBUTE Selector -  matches elements based on the presence or value of a given attribute
+	a[href="https://example.org"] { color: green;}
+The CSS universal selector (*) matches elements of any type.
+	* {color: green;}
+ CSS PSEUDO-CLASS is a keyword added to a selector that specifies a special state of the selected element. Example: :active , :hover, :last-child
+                div :hover { background-color: magenta;}
+CSS PSEUDO-ELEMENT is a keyword added to a selector that lets you style a specific part of the selected element(s). Example: ::after, ::first-letter; ::backdrop
+p::first-line { text-transform: uppercase;}
+COMBINATORS
+Adjacent sibling combinator (A +B)
+       img + p {font-style: bold;} This will select paragraphs that directly follows any image
+General sibling combinator (A ~ B)
+       img ~ p {color: red;} This will select paragraphs that subsequently follows an image
+Child combinator A > B
+ul.mylist > li {margin: 2em;} Selects li that are children of  "mylist"
+Descendant combinator A B
+	li li { list-style-type: circle;} List items that are descendants of li
+
+CSS RULE PRECEDENCE
+At the highest level the cascade is what controls all css precedence and works according to Origin and importance and Specificity
+1. Origin and importance
+a.	 Transition Declarations
+b.	Important user-agent declarations
+c.	important user declarations
+d.	Important override declarations
+e.	important author declarations
+f.	Animation Declaration
+g.	Normal override declarations
+h.	Normal author declarations
+i.	Normal user declarations
+j.	Normal user agent declarations
+2. Specificity
+	Specificity is calculated by counting various components of your css and expressing them in a form (a,b,c). 
+a.	ID
+b.	class, attribute, pseudo classes
+c.	type selectors; pseudo elements
+Examples:
+p: 1 element – (0,0,1)
+div: 1 element – (0,0,1)
+#sidebar: 1 id – (1,0,0)
+div#sidebar: 1 element, 1 id – (1,0,1)
+div#sidebar p: 2 elements, 1 id – (1,0,2)
+div#sidebar p.bio: 2 elements, 1 class, 1 id – (1,1,2)
+
+			
 
 
