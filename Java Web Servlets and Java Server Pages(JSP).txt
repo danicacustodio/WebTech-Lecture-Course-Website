@@ -1,0 +1,39 @@
+What is Java Servlet?
+Servlets provide a component-based, platform-independent method 
+for building Webbased applications, without the performance limitations of CGI programs.
+Servlets have access to the entire family of Java APIs, including the JDBC API 
+to access enterprise databases. This tutorial will teach you how to use Java Servlets 
+to develop your web based applications in simple and easy steps.
+A servlet is a Java programming language class that is used to 
+extend the capabilities of servers that host applications accessed 
+by means of a request-response programming model. 
+Although servlets can respond to any type of request, they are commonly used to extend 
+the applications hosted by web servers. For such applications, Java Servlet technology
+defines HTTP-specific servlet classes.
+
+The javax.servlet and javax.servlet.http packages provide interfaces and classes 
+for writing servlets. All servlets must implement the Servlet interface, 
+which defines life-cycle methods. When implementing a generic service, 
+you can use or extend the GenericServlet class provided with the Java Servlet API. 
+The HttpServlet class provides methods, such as doGet and doPost, 
+for handling HTTP-specific services.
+
+What Is a JSP Page?
+A JSP page is a text document that contains two types of text: 
+static data, which can be expressed in any text-based format (such as HTML, SVG, WML, and XML), 
+and JSP elements, which construct dynamic content.
+
+The recommended file extension for the source file of a JSP page is .jsp. 
+The page can be composed of a top file that includes other files that contain either a complete JSP page or a fragment of a JSP page. 
+The recommended extension for the source file of a fragment of a JSP page is .jspf.
+JavaServer Pages (JSP) technology enables Web developers and designers to rapidly develop and easily maintain, 
+information-rich, dynamic Web pages that leverage existing business systems. As part of the Java technology family, 
+JSP technology enables rapid development of Web-based applications that are platform independent. JSP technology separates the user interface from content generation, 
+enabling designers to change the overall page layout without altering the underlying dynamic content.
+JavaServer Pages technology is an extension of the Java Servlet technology. 
+Servlets are platform-independent, server-side modules that fit seamlessly into a Web server framework and can be used to extend 
+the capabilities of a Web server with minimal overhead, maintenance, and support. Unlike other scripting languages, 
+servlets involve no platform-specific consideration or modifications; they are application components that are downloaded, on demand, 
+to the part of the system that needs them. Together, JSP technology and servlets provide an attractive alternative to other 
+types of dynamic Web scripting/programming by offering: platform independence; enhanced performance; separation of logic from display; 
+ease of administration; extensibility into the enterprise; and, most importantly, ease of use.
