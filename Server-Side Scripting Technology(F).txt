@@ -1,0 +1,14 @@
+Server-Side Scripting Technology
+
+	Server-Side Scripts, languages that build your site behind the scenes. The goal of this software? To provide a seamless experience for the user that’s as close to a desktop application as possible.
+
+	the server, your database, any APIs, and a back-end web application, software written via server-side languages. The server is a powerful computer that runs the back-end software, the database houses your site’s data, and the software communicates between the two.
+
+	Server-side scripts are used by back-end web developers to build the back-end software of a website—the mechanics we don’t see, but that make a site’s usability and functionality possible. These languages create the communication channel between user, server, and database. Anything that isn’t explicitly written into the text markup of a site is front-end or back-end software. Any data that a user requests in the browser is delivered via server-side scripts, which create a channel between server and end user that requests, edits, and deletes things in the database. In the browser, front-end scripts make that information available to the user.
+
+	SERVER-SIDE SCRIPT BASICS
+	-Run on a Server
+	-Facilitates the transfer of data
+	-Runs on-call
+	-Powers function in dynamic web application
+	-Application Program Interfaces(API)
