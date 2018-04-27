@@ -1,16 +1,16 @@
-What is PHP?
+PHP also known as Hypertext Preprocessor
 
-PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose 
-scripting language that is especially suited for web development and can be embedded into HTML.
-PHP can generate dynamic page content
-PHP can create, open, read, write, delete, and close files on the server
-PHP can collect form data
-PHP can send and receive cookies
-PHP can add, delete, modify data in your database
-PHP can be used to control user-access
-PHP can encrypt data
-PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
-PHP is compatible with almost all servers used today (Apache, IIS, etc.)
-PHP supports a wide range of databases
-PHP is free
-PHP is easy to learn and runs efficiently on the server side
+It is an open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+
+Before using PHP you have a basic understanding on HTML, CSS, and JavaScript
+ 
+PHP can do.
+	-PHP can generate dynamic page content
+	-PHP can create, open, read, write, delete, and close files on the server
+	-PHP can collect form data
+	-PHP can send and receive cookies
+	-PHP can add, delete, modify data in your database
+	-PHP can be used to control user-access
+	-PHP can encrypt data
+
+PHP distinguishes something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve.
