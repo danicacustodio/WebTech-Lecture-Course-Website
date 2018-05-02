@@ -1,0 +1,22 @@
+Java Servlet
+
+1.) What is a Servlet?
+2.) Why servlets are used?
+3.) What is a filter?
+4.) What is called a session?
+5.) Name one life cycle of a servlet.
+6.) When servlet is loaded?
+7.) What are the advantages of cookies?
+8.) What is the difference between JSP and Servlets?
+9.) What is the difference between server and container?
+10.) What is the difference between applets and servlets?
+11.) What is Java Servlet?
+12.) What is called Servlet Mapping?
+13.) What is the default HTTP method in the servlet?
+14.) What are the uses of servlets?
+15.) What is MIME Type?
+16.) Can we get PrintWriter and ServletOutputStream both in a servelt?
+17.) How can we achieve transport later security for our web application?
+18.) When servlet is loaded?
+19.) What is called Scriplet?
+20.) Who is responsible for writing a constructor?

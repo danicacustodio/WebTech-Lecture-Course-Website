@@ -1,0 +1,22 @@
+PHP QUESTIONNAIRES
+
+1.) What is PHP?
+2.) What does PHP stand for?
+3.) Which programming language does PHP resemble to?
+4.) Does PHP supports multiple inheritance?
+5.) How does PHP and HTML interact?
+6.) How does Javascript and PHP interact?
+7.) How can database connect to PHP script?
+8.) What is a session?
+9.) How can you initiate a session?
+10.) Define Scope Variable.
+11.) Give the two main string operators.
+12.) Is it possible to destroy a cookie?
+13.) Which of the looping statements is/are supported by PHP?
+14.) Give three types of messages available in PHP
+15.) What components are used in formattin PHP?
+16.) What is the difference between htmlentities() and htmlspecialchars()?
+17.) The value of the variable input is a string 1,2,3,4,5,6,7. How would you 		 get the sum of the integers contained inside input?
+18.) What are the 3 scope levels available in PHP?
+19.) Why getters and setter are important?
+20.) How can you prevent  SQL injections?
