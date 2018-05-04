@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+				<link href="css/style.css" rel="stylesheet">
+			<script src="script.js"></script>
+	</head>
+<body>
+	<div id="mainform">
+		<div class="innerdiv">
+			<h2>Submit Form</h2>
+<!-- Required Div Starts Here -->
+				<form id="form" name="form" method="post" action="reg.php">
+					<h3>Fill Your Information!</h3>
+						<div>
+							<label>Name :</label>
+							<input id="name" type="text" name="username">
+							<label>Email :</label>
+							<input id="email" type="text" name="useremail">
+							<label>Password :</label>
+							<input id="password" type="password" name="userpassword">
+							<input id="submit" onclick="myFunction()" type="button" value="Submit">
+						</div>
+				</form>
+			<div id="clear"></div>	
+		</div>
+	<div id="clear"></div>
+	</div>
+</body>
+</html>
