@@ -1,0 +1,44 @@
+OWASP
+The Open Web Application Security Project (OWASP) is an
+open community dedicated to enabling organizations to
+develop, purchase, and maintain applications and APIs that
+can be trusted.
+The OWASP Top 10 is a powerful awareness document for web application security. 
+It represents a broad consensus about the most critical security risks 
+to web applications. Project members include a variety of security experts 
+from around the world who have shared their expertise to produce this list.
+
+Top 10 Application Security Risks (2017)
+A1:2017 - Injection
+A2:2017 - Broken Authentication
+A3:2017 - Sensitive Data Exposure
+A4:2017 - XML External Entities (XXE)
+A5:2017 - Broken Access Control
+A6:2017 - Security Misconfiguration
+A7:2017 - Cross-Site Scripting (XSS)
+A8:2017 - Insecure Deserialization
+A9:2017 - Using Components with Known Vulnerabilities
+A10:2017 - Insufficient Logging & Monitoring
++D - What’s Next for Developers
++T - What’s Next for Security Testers
++O- What’s Next for Organizations
++A- What’s Next for Application Managers
++R - Note About Risks
++RF- Details About Risk Factors
++DAT - Methodology and Data
++ACK - Acknowledgements
+
+At OWASP, you'll find free and open:
+• Application security tools and standards.
+• Complete books on application security testing, secure
+code development, and secure code review.
+• Presentations and videos.
+• Cheat sheets on many common topics.
+• Standard security controls and libraries.
+• Local chapters worldwide.
+• Cutting edge research.
+• Extensive conferences worldwide.
+• Mailing lists.
+
+https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project

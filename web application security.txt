@@ -1,0 +1,34 @@
+Web application security
+
+Web application security is the process of securing confidential data stored online 
+from unauthorized access and modification. 
+This is accomplished by enforcing stringent policy measures. 
+Security threats can compromise the data stored by an organization is hackers with malicious intentions 
+try to gain access to sensitive information.
+
+The aim of Web application security is to identify the following:
+	Critical assets of the organization
+	Genuine users who may access the data
+	Level of access provided to each user
+	Various vulnerabilities that may exist in the application
+	Data criticality and risk analysis on data exposure
+	Appropriate remediation measures
+
+Web application security aims to address and fulfill the four conditions of 
+security, also referred to as principles of security:
+	Confidentiality: States that the sensitive data stored in the Web 
+		application should not be exposed under any circumstances.
+	Integrity: States that the data contained in the Web application is 
+		consistent and is not modified by an unauthorized user.
+	Availability: States that the Web application should be accessible to the 
+		genuine user within a specified period of time depending on the request.
+	Nonrepudiation: States that the genuine user cannot deny modifying the 
+		data contained in the Web application and that the Web application can 
+		prove its identity to the genuine user.
+		
+The process of security analysis runs parallel with Web application development. 
+The group of programmers and developers who are responsible for code development 
+are also responsible for the execution of various strategies, 
+post-risk analysis, mitigation and monitoring.
+
+https://www.techopedia.com/definition/24377/web-application-security
