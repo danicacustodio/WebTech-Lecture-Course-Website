@@ -1,0 +1,76 @@
+body {
+	width:600px;
+	border:red 1px solid;
+	border-style:dashed;
+	margin:auto;
+	padding:10px;
+}
+td {
+	text-align:center;
+	padding:10px;
+}
+table {
+	margin:auto;
+}
+input[type="text"] {
+	width:150px;
+    font-size: 18px;
+    border: blue 1px solid;
+    text-indent: 5px;
+	cursor:pointer;
+}
+
+label {
+	font-size:18px;
+	color:violet;
+    font-weight: bold;
+    font-family: Verdana;
+}
+h2 {
+	color:red;
+	text-align:center;
+}
+.submit_btn {
+	margin-right: 70px;
+    border: blue 1px solid;
+    font-size: 18px;
+    font-family: verdana;
+    padding: 5px;
+    font-weight: bold;
+    color: blue;
+    background: azure;
+    border-radius: 4px;
+}
+.submit_btn:hover {
+	margin-right: 70px;
+    border: red 1px solid;
+    font-size: 18px;
+    font-family: Verdana;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background: blue;
+    border-radius: 4px;
+	cursor:pointer;
+}
+.cancel_btn {
+    border: red 1px solid;
+    font-size: 18px;
+    font-family: Verdana;
+    padding: 5px;
+    font-weight: bold;
+    color: red;
+    background: azure;
+    border-radius: 4px;
+}
+.cancel_btn:hover {
+    border: blue 1px solid;
+    font-size: 18px;
+    font-family: cursive;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background: red;
+    border-radius: 4px;
+	cursor:pointer;
+}

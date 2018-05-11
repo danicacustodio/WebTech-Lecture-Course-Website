@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Midterms</title>
+</head>
+<body>
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<br/>
+<div class="header">
+<h1>Web Technology Lecture</h1>
+</div>
+<div class="row">
+  <div class="column left">
+    <h2>FINALS</h2>
+		<dl>
+		<dt><a href="#jws">Java Web Servlets</a></dt>
+		<dt><a href="#jsp">Java Server Pages</a></dt>
+		<dt><a href="#nj">Node JS Course Notes</a></dt>
+		<dt><a href="#php">PHP</a></dt>
+		<dt><a href="#ssnj">Server-Side JavaScript(with Node.js)</a></dt>
+		<dt><a href="#sst">Server-Side Scripting Technology</a></dt>
+		<dt><a href="#was">Web Application Security</a></dt>
+		<dt><a href="#owasp">OWASP</a></dt>
+		<dd><a href="#t10">Top 10 Application Security Risks (2017)</a></dd>
+</dl>
+  </div>
+<div class="column right">
+<section id="jws">
+	<h2>What is Java Servlet?</h2>
+		<p>Servlets provide a component-based, platform-independent method 
+		for building Webbased applications, without the performance limitations of CGI programs.
+		Servlets have access to the entire family of Java APIs, including the JDBC API 
+		to access enterprise databases. This tutorial will teach you how to use Java Servlets 
+		to develop your web based applications in simple and easy steps.
+		A servlet is a Java programming language class that is used to 
+		extend the capabilities of servers that host applications accessed 
+		by means of a request-response programming model. 
+		Although servlets can respond to any type of request, they are commonly used to extend 
+		the applications hosted by web servers. For such applications, Java Servlet technology
+		defines HTTP-specific servlet classes.</p>
+
+		<p>The javax.servlet and javax.servlet.http packages provide interfaces and classes 
+		for writing servlets. All servlets must implement the Servlet interface, 
+		which defines life-cycle methods. When implementing a generic service, 
+		you can use or extend the GenericServlet class provided with the Java Servlet API. 
+		The HttpServlet class provides methods, such as doGet and doPost, 
+		for handling HTTP-specific services.</p>
+</section>
+<section id="jsp">
+<h2>What Is a JSP Page?</h2>
+<p>A JSP page is a text document that contains two types of text: 
+static data, which can be expressed in any text-based format (such as HTML, SVG, WML, and XML), 
+and JSP elements, which construct dynamic content.</p>
+
+<p>The recommended file extension for the source file of a JSP page is .jsp. 
+The page can be composed of a top file that includes other files that contain either a complete JSP page or a fragment of a JSP page. 
+The recommended extension for the source file of a fragment of a JSP page is .jspf.
+JavaServer Pages (JSP) technology enables Web developers and designers to rapidly develop and easily maintain, 
+information-rich, dynamic Web pages that leverage existing business systems. As part of the Java technology family, 
+JSP technology enables rapid development of Web-based applications that are platform independent. JSP technology separates the user interface from content generation, 
+enabling designers to change the overall page layout without altering the underlying dynamic content.
+<p>JavaServer Pages technology is an extension of the Java Servlet technology.</p>
+Servlets are platform-independent, server-side modules that fit seamlessly into a Web server framework and can be used to extend 
+the capabilities of a Web server with minimal overhead, maintenance, and support. Unlike other scripting languages, 
+servlets involve no platform-specific consideration or modifications; they are application components that are downloaded, on demand, 
+to the part of the system that needs them. Together, JSP technology and servlets provide an attractive alternative to other 
+types of dynamic Web scripting/programming by offering: platform independence; enhanced performance; separation of logic from display; 
+ease of administration; extensibility into the enterprise; and, most importantly, ease of use.</p>
+</section>
+<section id="nj">
+<h2>What is Node JS?</h2>
+<ul style="list-style-type:none">
+	<li>Node.js is an open source server environment</li>
+	<li>Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)</li>
+	<li>Node.js uses JavaScript on the server</li>
+</ul>
+
+<h3>What Can Node.js Do?</h3>
+<ul style="list-style-type:none">
+	<li>Node.js can generate dynamic page content</li>
+	<li>Node.js can create, open, read, write, delete, and close files on the server</li>
+	<li>Node.js can collect form data</li>
+	<li>Node.js can add, delete, modify data in your database</li>
+</ul>
+
+<h3>What is a Node.js File?</h3>
+<ul style="list-style-type:none">
+	<li>Node.js files contain tasks that will be executed on certain events
+	<li>A typical event is someone trying to access a port on the server
+	<li>Node.js files must be initiated on the server before having any effect
+	<li>Node.js files have extension ".js"
+</ul>
+</section>
+<section id="php">
+<h2>PHP (Hypertext Preprocessor)</h2>
+<p>It is an open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
+<p>Before using PHP you have a basic understanding on HTML, CSS, and JavaScript</p>
+
+<h3>PHP can do</h3>
+<ul style="list-style-type:none">
+	<li>PHP can generate dynamic page content</li>
+	<li>PHP can create, open, read, write, delete, and close files on the server</li>
+	<li>PHP can collect form data</li>
+	<li>PHP can send and receive cookies</li>
+	<li>PHP can add, delete, modify data in your database</li>
+	<li>PHP can be used to control user-access</li>
+	<li>PHP can encrypt data</li>
+</ul>
+<p>PHP distinguishes something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client.
+The client would receive the results of running that script, but would not know what the underlying code was. 
+You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve.</p>
+</section>
+
+<section id="ssnj">
+<h2>Server-Side JavaScript (with Node.JS)</h2>	
+<p>Node.js is a bit different from these solutions, because it is event-based rather than thread based. Web servers like Apache that are used to serve PHP and other CGI scripts are thread based because they spawn a system thread for every incoming request. While this is fine for many applications, the thread based model does not scale well with many long-lived connections like you would need in order to serve real-time applications like Friendfeed or Google Wave.</p>
+<p>Node.js, uses an event loop instead of threads, and is able to scale to millions of concurrent connections. 
+It takes advantage of the fact that servers spend most of their time waiting for I/O operations, like reading a file from a hard drive, accessing an external web service or waiting for a file to finish being uploaded, because these operations are much slower than in memory operations. 
+Every I/O operation in Node.js is asynchronous, meaning that the server can continue to process incoming requests while the I/O operation is taking place. 
+JavaScript is extremely well suited to event-based programming because it has anonymous functions and closures which make defining inline callbacks a cinch, and JavaScript developers already know how to program in this way. 
+This event-based model makes Node.js very fast, and makes scaling real-time applications very easy.</p>
+</section>
+
+<section id="sst">
+<h2>Server-Side Scripting Technology</h2>
+<p>Server-Side Scripts, languages that build your site behind the scenes. 
+The goal of this software? To provide a seamless experience for the user that’s as close to a desktop application as possible.</p>
+<p>the server, your database, any APIs, and a back-end web application, software written via server-side languages. 
+The server is a powerful computer that runs the back-end software, the database houses your site’s data, and the software communicates between the two.</p>
+<p>Server-side scripts are used by back-end web developers to build the back-end software of a website—the mechanics we don’t see, but that make a site’s usability and functionality possible. 
+These languages create the communication channel between user, server, and database. 
+Anything that isn’t explicitly written into the text markup of a site is front-end or back-end software. 
+Any data that a user requests in the browser is delivered via server-side scripts, which create a channel between server and end user that requests, edits, and deletes things in the database. 
+In the browser, front-end scripts make that information available to the user.</p>
+<h3>SERVER-SIDE SCRIPT BASICS</h3>
+<ul>
+	<li>Run on a Server</li>
+	<li>Facilitates the transfer of data</li>
+	<li>Runs on-call</li>
+	<li>Powers function in dynamic web application</li>
+	<li>Application Program Interfaces(API)</li>
+</ul>
+</section>
+
+<section id="was">
+<h2>Web Application Security</h2>
+
+<p>Web application security is the process of securing confidential data stored online 
+from unauthorized access and modification. 
+This is accomplished by enforcing stringent policy measures. 
+Security threats can compromise the data stored by an organization is hackers with malicious intentions 
+try to gain access to sensitive information.</p>
+
+<h3>The aim of Web application security is to identify the following:</h3>
+<ul style="list-style-type:none">
+	<li>Critical assets of the organization</li>
+	<li>Genuine users who may access the data<li>
+	<li>Level of access provided to each user</li>
+	<li>Various vulnerabilities that may exist in the application</li>
+	<li>Data criticality and risk analysis on data exposure</li>
+	<li>Appropriate remediation measures</li>
+</ul>
+	
+<h3>Web application security aims to address and fulfill the four conditions of 
+security, also referred to as principles of security:</h3>
+<ul style="list-style-type:none">
+	<li>Confidentiality: States that the sensitive data stored in the Web 
+		application should not be exposed under any circumstances.</li>
+	<li>Integrity: States that the data contained in the Web application is 
+		consistent and is not modified by an unauthorized user.</li>
+	<li>Availability: States that the Web application should be accessible to the 
+		genuine user within a specified period of time depending on the request.</li>
+	<li>Nonrepudiation: States that the genuine user cannot deny modifying the 
+		data contained in the Web application and that the Web application can 
+		prove its identity to the genuine user.</li>
+		
+<p>The process of security analysis runs parallel with Web application development. 
+The group of programmers and developers who are responsible for code development 
+are also responsible for the execution of various strategies, 
+post-risk analysis, mitigation and monitoring.</p>
+</section>
+
+<section id="owasp">
+<h2>Open Web Application Security Project(OWASP)</h2>
+<p>The Open Web Application Security Project (OWASP) is an
+open community dedicated to enabling organizations to
+develop, purchase, and maintain applications and APIs that
+can be trusted.<p>
+<p>The OWASP Top 10 is a powerful awareness document for web application security. 
+It represents a broad consensus about the most critical security risks 
+to web applications. Project members include a variety of security experts 
+from around the world who have shared their expertise to produce this list.</p>
+<section id="t10">
+<h3>Top 10 Application Security Risks (2017)</h3>
+<ul style="list-style-type:none">
+	<li>A1:2017 - Injection
+	<li>A2:2017 - Broken Authentication
+	<li>A3:2017 - Sensitive Data Exposure
+	<li>A4:2017 - XML External Entities (XXE)
+	<li>A5:2017 - Broken Access Control
+	<li>A6:2017 - Security Misconfiguration
+	<li>A7:2017 - Cross-Site Scripting (XSS)
+	<li>A8:2017 - Insecure Deserialization
+	<li>A9:2017 - Using Components with Known Vulnerabilities
+	<li>A10:2017 - Insufficient Logging & Monitoring
+</ul>
+
+<h3>At OWASP, you'll find free and open:</h3>
+<ul>
+	<li>Application security tools and standards.
+	<li>Complete books on application security testing, secure code development, and secure code review.
+	<li>Presentations and videos.
+	<li>Cheat sheets on many common topics.
+	<li>Standard security controls and libraries.
+	<li>Local chapters worldwide.
+	<li>Cutting edge research.
+	<li>Extensive conferences worldwide.
+	<li>Mailing lists.
+</ul>
+</section>
+	<a href="quiz.php" class="next">Proceed to Quiz &raquo;</a>
+</div>
+</div>
+<div class="foot">
+  <h3>Copyright 2018</h3>
+</div>
+</body>
+</html>
