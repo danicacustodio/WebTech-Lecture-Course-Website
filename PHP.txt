@@ -14,3 +14,20 @@ PHP can do.
 	-PHP can encrypt data
 
 PHP distinguishes something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve.
+
+Basic PHP Syntax
+	A PHP script can be placed anywhere in the document. It Starts with 
+	<?php and ends with ?> The default file extension for PHP is ".php"
+	
+	PHP also supports diffent ways of commenting. // and # is used for single-line comment, and  /* */ for multiple-lines comment
+	All keywords, classes, functions and user-defined functions in PHP are not case sensitive.
+	
+	
+PHP Variables
+Variables are "containers" for storing information. There are set of rules to be followed for PHP variables:
+	A variable starts with the $ sign, followed by the name of the variable
+	A variable name must start with a letter or the underscore character
+	A variable name cannot start with a number
+	A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+	Variable names are case-sensitive ($age and $AGE are two different variables)
+	
