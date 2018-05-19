@@ -1,0 +1,188 @@
+Java Web Servlets
+
+A servlet is a technology that is used to create and extend capabilities of a server and responds to any type of requests. It is and
+webserver component that uses Java language that is deployed on the server to create a dynamic web page without the performance limitation of CGI. It has an access to the Java APIs 
+including the JDBC API to access enterprise databases.The servlet specification was created by Pavni Diwanji at Sun Microsystems and was developed
+under the Java Community Process. Servlets perform major tasks like reading explicit data sent by clients like entered data in an HTML form; read implicit HTTP request data sent by clients such as cookies,
+media types and compression schemes; Process data and generate results by establishing a connection to a database; and send explicit and implicit data.
+
+ 
+All servlets must implement the Servlet interface by extending the GenericServlet and HttpServlet, which defines life-cycle methods. 
+ Life Cycle :
+  A servlet life cycle can be defines as the entire process from its creation till the destruction.
+  There are three methods that are central to the life cycle of a servlet, these are init(), service() and destroy(). The life cycle contains five steps
+  1. Loading of Servlets  
+		- When a webserver starts up, the web container deploy and loads all the servlets
+  2. Creating instance of Servelets 
+		- The servlet container then creates instances for every servlet class and executes all the requests on the same servlet instance
+  3. Invoke init()  
+		-The init() mmethod is then invoked for each instantiated servlet. This method initializes the servlet.
+  4. Invoke service() 
+		- Each time a server receives a request for a servlet, it spawns a new thread that calls service() method. These is the only step in the life cycle that executes multiple times
+  5. Invoke destroy()  
+		- When servlet containers shutdown, or the web server is stopped, the servlets are unloaded and destroy() method is invoked
+  
+   In the Servlet API, there are two packages you must remember, javax.servlet package and javax.servlet.http package. 
+   
+   GenericServlet
+   
+    The javax.servlet package containss the classes that support GenericServlet. A generic servlet is a protocol-independent servlet. 
+	When using a generic servlet,the service() method should always be overriden to handle a client request. 
+	
+	The service() method accepts two arguments ServletRequest and ServletResponse objects. The request object tells the servlet about the request made by client while the response object is used to return 
+	a response back to the client.
+		public abstract void service(ServletRequest request, ServletResponse response) 
+
+	
+    Other methods in the GenericServlet class 
+		public void init()  
+				This method can be overridden so that there’s no need to call super.init(config).
+        public void init(ServletConfig config) 
+				This method is used for initializing the servlet.
+		public String getInitParameter(String name)
+				Returns a String containing the value of the given initialization parameter, or null if the parameter does not exist.
+		public Enumeration getInitParameterNames()
+				Returns the names of all the parameters defined in the web.xml file or null if web.xml does’t have any parameter.
+		public void destroy(): 
+				It is called by servlet container once at the end of servlet life cycle to indicate that servlet is being destroyed.
+		public ServletConfig getServletConfig()
+				Return the ServletConfig object that initialized this servlet
+		public String getServletInfo()
+				Returns information about servlet.
+		public ServletContext getServletContext()
+				Return ServletContext object, passed to this servlet by the init method
+		public String getServletName()
+				Returns the name of the servlet instance.
+		public void log(String msg)
+				Writes the given message in the servlet log file.
+		public void log(String msg,Throwable t)
+			Writes the explanatory message in the servlet log file including a String that describes the error or exception.
+	
+   HttpServlet
+   
+    Unlike Generic Servlet, the HTTP Servlet doesn’t override the service() method. Instead it overrides the doGet() method or doPost() method or both. The doGet() method is used for getting the information from server while the doPost() method 
+	is used for sending information to the server.
+	
+	Methods in the HttpServlet class
+		protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			This method  handles the HTTP GET request from client. When overriding this method, read the request data, write the response headers, get the response’s writer or output stream object, and finally, write the response data.
+		protected long getLastModified(HttpServletRequest req)
+			Returns a long integer specifying the time the HttpServletRequest object was last modified, in milliseconds since midnight, January 1, 1970 GMT, or -1 if the time is not known
+		protected void doHead(HttpServletRequest req, HttpServletResponse resp)
+			This method handles the HTTP HEAD request from client. The client sends a HEAD request when it wants to see only the headers of a response, such as Content-Type or Content-Length
+		protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			This method handles the POST request from client. This method is used when we are transferring information from client to the server.
+		protected void doPut(HttpServletRequest req, HttpServletResponse resp)
+			This method handles the PUT request from client. This method sends file to the server.
+		protected void doDelete(HttpServletRequest req, HttpServletResponse resp)
+			Called by servlet service() method to handle the DELETE request from client that allows a client to delete a document, webpage or information from the server.
+		protected void doOptions(HttpServletRequest req, HttpServletResponse resp)
+			Called by the service() method to allow a servlet to handle a OPTIONS request. The OPTIONS request determines which HTTP methods the server supports and returns an appropriate header.
+		protected void doTrace(HttpServletRequest req, HttpServletResponse resp)
+			This method is called by service() method for handling TRACE request. Used for debugging purposes.
+		protected void service(HttpServletRequest req, HttpServletResponse resp)
+			There is no need to override this method, this method receives the HTTP request from client and forwards them to the corresponding do methods such as doGet(), doPost(), doHEAD() etc.
+		public void service(ServletRequest req, ServletResponse res)
+			Forwards client request to the protected service method. There’s no need to override this method as well.
+			
+			
+	ServletRequest and ServletResponse 
+	
+	ServletRequest and ServletResponse objects are created when a client sends a request to tje webserver. The request object
+	provides the access to the request information such as header abd body informatioon of the request data while the response method  
+	allows you to format and send the response back to the client. 
+	
+	ServletRequest Methods
+		String getParameter(String name)
+			It returns the value of the given parameter as String or null if the given parameter does not exist.
+		Enumeration getParameterNames()
+			It returns an Enumeration of Strings objects containing the names of parameters in the request.
+		String[] getParameterValues(String name)
+			It returns an array of Strings containing the all the values, the parameters has, returns null if parameter doesn’t have any value.
+		String getCharacterEncoding()
+			Returns the name of the character encoding used in the body of this request. This method returns null if the request does not specify a character encoding.
+		void setCharacterEncoding(String env)
+			Overrides the character encoding in the body of the request.
+		int getContentLength()
+			Returns the length of the request content in bytes.
+		String getContentType()
+			Returns the MIME type of the body of the request, or null if the type is not known.
+			
+	ServletResponse Methods
+		String getCharacterEncoding()
+			It returns the name of the MIME charset used in body of the response sent to the client.
+		String getContentType()
+			It returns the response content type. e.g. text, html etc.
+		ServletOutputStream getOutputStream()
+			Returns a ServletOutputStream suitable for writing binary data in the response.
+		java.io.PrintWriter getWriter()
+			Returns the PrintWriter object.
+		void setCharacterEncoding(java.lang.String charset)
+			Set the MIME charset (character encoding) of the response.
+		void setContentLength(int len)
+			It sets the length of the response body.
+		void setContentType(java.lang.String type)
+			Sets the type of the response data.
+		void setBufferSize(int size)
+			Sets the buffer size.
+		int getBufferSize()
+			Returns the buffer size.
+		void flushBuffer()
+			Forces any content in the buffer to be written to the client.
+		boolean isCommitted()
+			Returns a boolean indicating if the response has been committed.
+		void reset()
+		    clears the data of the buffer along with the headers and status code.
+			
+	HttpSession
+	
+	The HttpSession object is used for session management. A session contains information specific to a particular user across the whole application.
+	When a user enters into a website  the user is given a unique ID to identify the session. This unique ID can be stored into a cookie or in a request parameter.
+	The HttpSession stays alive until it has not been used for more than the timeout value specified in tag in deployment descriptor file (30 mins by default). 
+	When the user exits and doesn’t visit the web application in the time specified,the session is destroyed.
+	
+	HttpSession Methods
+	
+		public void setAttribute(String name, Object value)
+			Binds the object with a name and stores the name/value pair as an attribute of the HttpSession object. If an attribute already exists, then this method replaces the existing attributes.
+		public Object getAttribute(String name)
+			Returns the String object specified in the parameter, from the session object. If no object is found for the specified attribute, then the getAttribute() method returns null.
+		public Enumeration getAttributeNames()
+			Returns an Enumeration that contains the name of all the objects that are bound as attributes to the session object.
+		public void removeAttribute(String name)
+			Removes the given attribute from session.
+		setMaxInactiveInterval(int interval)
+			Sets the session inactivity time in seconds. This is the time in seconds that specifies how long a sessions remains active since last request received from client.
+			
+			
+
+			
+Java Server Pages JSP 
+
+JSP is a server-side programming technology the creation of dynamic, platform-independent method for building Web-based applications. It was developed by 
+Sun Microsystems as an alternative to Microsoft's Active Server Pages (ASP) technology, and a key component of the Java 2 Enterprise Edition (J2EE) specification.
+avaServer Pages are built on top of the Java Servlets API, so like Servlets, JSP also has access to all the powerful Enterprise Java APIs.
+Web developers write JSPs as text files that combine HTML, XML elements, and embedded JSP actions and commands.
+
+Life Cycle of JSP
+ There are four major phases of a JSP life cycle that are very similar to the Servlet. The following are the paths that are followed by a JSP:
+	Compilation
+	Initialization
+	Execution
+	Cleanup
+	
+Elements of JSP
+Scriplet - A scriptlet can contain any number of JAVA language statements, variable or method declarations, or expressions that are valid in the 
+			page scripting language.
+JSP Declarations -A  JSP declaration declares one or more variables or methods that you can use in Java code later in the JSP file. 
+              You must declare the variable or method before you use it in the JSP file.
+JSP Expression -  A JSP expression element contains a scripting language expression that is evaluated, converted to a String, and 
+				inserted where the expression appears in the JSP file
+JSP Comments - JSP comments mark text or statements that the JSP container should ignore. A JSP comment is useful when you want to hide 
+				or "comment out", a part of your JSP page.
+JSP Derivatives - JSP derivatives defines page-dependent attributes, such as scripting language, error page, and buffering requirements,Includes a file during the translation phase 
+				and Declares a tag library, containing custom actions, used in the page
+JSP Actions - JSP actions use constructs in XML syntax to control the behavior of the servlet engine. You can dynamically insert a file, reuse JavaBeans 
+				components, forward the user to another page, or generate HTML for the Java plugin.
+JSP Implicit Objects - JSP support 9 automatically defined variables: request, response,out,session,application,config,pageContext
+						page, and Exception
